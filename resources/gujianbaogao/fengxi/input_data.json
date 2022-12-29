@@ -1,0 +1,298 @@
+{
+  "initTemplate": "E:\\ky\\ky\\ssp\\backend\\reportj\\data/init.docx",
+  "header": {
+    "firstTemplate": "",
+    "defaultTemplate": "header_default.ftl",
+    "evenTemplate": "",
+    "data": {
+      "references": [
+        {
+          "type": "watermark",
+          "name": "watermarkRelationshipId",
+          "property": {
+            "imagePath": "E:\\ky\\ky\\ssp\\backend\\reportj\\data\\watermark.png"
+          }
+        }
+      ],
+      "header_text": "Lcc sets a header!"
+    }
+  },
+  "footer": null,
+  "titleStyle": {
+    "levelStyle": {
+      "1": "title_level1.ftl",
+      "2": "title_level2.ftl",
+      "3": "title_level3.ftl",
+      "4": "title_level4.ftl"
+    },
+    "data": {}
+  },
+  "toc": {
+    "template": "toc.ftl",
+    "data": {
+      "headingText": "目录"
+    }
+  },
+  "document": {
+    "title": "root",
+    "method": "",
+    "children": [
+      {
+        "title": "固件安全检测总览",
+        "method": "",
+        "children": [
+          {
+            "title": "固件检测整体情况",
+            "method": "",
+            "data": {
+              "table": [["发现问题总数","43","6","37","0"],["CVE漏洞总数","9","4","5","0"]]
+            },
+            "level": {
+              "parentLevel": "1",
+              "format": "1.1.",
+              "order": "1"
+            },
+            "template": "section11.ftl"
+          },
+          {
+            "title": "固件基本信息",
+            "method": "",
+
+            "data": {
+              "table": [["文件名称","DIR645A1_FW104B11(1).bin"],["设备名称","654A1"],["厂商","DIR"],["分析时间","2021-06-11 23:29:52"]]
+            },
+            "level": {
+              "parentLevel": "1",
+              "format": "1.2.",
+              "order": "2"
+            },
+            "template": "section12.ftl"
+          },
+          {
+            "title": "固件安全检测结果总结",
+            "method": "",
+            "data": {
+              "tblheaders":["自身安全检测（3项）","敏感信息检测（1项）","软件成分识别（1项）"],
+              "tbls":[
+                [["1","文件hashes","N/A","N/A"],["2","cpu架构","x86","N/A"],["3","文件系统","N/A","N/A"]],
+                [["4","SVN信息泄露风险","中","安全"]],
+                [["5","软件漏洞检测（1项）","中","存在风险（发现6处）"]]
+              ]
+            },
+            "level": {
+              "parentLevel": "1",
+              "format": "1.3.",
+              "order": "3"
+            },
+
+            "template": "section13.ftl"
+          }
+        ],
+        "data": {},
+        "level": {
+          "parentLevel": "",
+          "format": "1.",
+          "order": "1"
+        },
+        "template": ""
+      },
+      {
+        "title": "固件安全检测结果详情",
+        "method": "",
+        "data": {},
+        "children": [
+          {
+            "title": "自身安全",
+            "method": "",
+            "children": [
+              {"title": "文件hashes",
+                "method": "",
+                "children": [],
+                "data": {
+                  "table": [["md5","76705bb4ueraw44dc"],["sha256","99abcufihsakjdfjshdnfjc40fhsakjdfjshdnfhsakjdfjshdnfhsakjdfjshdnfhsakjdfjshdnf"],["sha512","e70eusdfhhiuauefrhiwaefiaewoiuorfjiweoirijae6"]]
+                },
+                "level": {
+                  "parentLevel": "2.1",
+                  "format": "2.1.1.",
+                  "order": 1
+                },
+                "template": "section211.ftl"
+              },
+              {"title": "CPU架构",
+                "method": "",
+                "children": [],
+                "data": {
+                  "table": "MIPS, 32-bit, little endian (M)"
+                },
+                "level": {
+                  "parentLevel": "2.1",
+                  "format": "2.1.2.",
+                  "order": 2
+                },
+                "template": "section212.ftl"
+              }
+            ],
+            "data": {},
+            "level": {
+              "parentLevel": "2",
+              "format": "2.1.",
+              "order": "1"
+            },
+            "template": ""
+          },
+          {"title": "敏感信息检测",
+            "method": "",
+            "children": [
+              {
+                "title": "用户密码信息泄露风险",
+                "method": "",
+                "children": [],
+                "data": {
+                  "table":[["检测固件存在明文密码信息","中","很多物联网","存在风险2处","无","N/A"]]
+                },
+                "level": {
+                  "parentLevel": "2.2",
+                  "format": "2.2.1.",
+                  "order": "1"
+                },
+                "template": "section221.ftl"
+              }
+            ],
+            "data": {},
+            "level": {
+              "parentLevel": "2",
+              "format": "2.2.",
+              "order": "2"
+            },
+            "template": ""
+          },
+          {
+            "title": "软件成分识别",
+            "method": "",
+            "children": [
+              {
+                "title": "软件成分识别",
+                "method": "",
+                "children": [],
+                "data": {
+                  "table":[["1","Dnsmasq","2.45","/_99abcldfjldfjlskdfjsakdf"],["2","Busy","1.14.1","/_99abcdhfjkkfhkekij"]]
+                },
+                "level": {
+                  "parentLevel": "2.3",
+                  "format": "2.3.1.",
+                  "order": "1"
+                },
+                "template": "section231.ftl"
+              }
+            ],
+            "data": {
+
+            },
+            "level": {
+              "parentLevel": 2,
+              "format": "2.3.",
+              "order": "3"
+            },
+            "tempalte": ""
+          },
+          {
+            "title": "软件组件漏洞检测",
+            "method": "",
+            "children": [
+              {
+                "title": "Dnsmasq2.45",
+                "method": "",
+                "children": [],
+                "data": {
+                  "table": [["1","Dnsmasq","2.45","3","2","1","0"]],
+                  "loopholes": [["CVE-2017-15107","CNNVD-201801-879","中","代码漏洞","远程","Dnsmasq是软件开发者Simon Kelly所研发的一款使用C语言","不安全","/_99abc2147dfdfjajff/dnsmasq"],
+                    ["CVE-2018-15107","CNNVD-201801-879","高","代码漏洞","远程","Dnsmasq是软件开发者Simon Kelly所研发的一款使用C语言","不安全","/_99abc2147dfdfjajff/dnsmasq"]]
+                },
+                "level": {
+                  "parentLevel": "2.4",
+                  "format": "2.4.1.",
+                  "order": "1"
+                },
+                "template": "section241.ftl"
+              }
+            ],
+            "data": {
+              "table": [["1","Dnsmasq","2.45","3","2","1","0"],["2","iptables","1.4.7","1","1","0","0"]]
+            },
+            "level": {
+              "parentLevel": "2",
+              "format": "2.4.",
+              "order": "4"
+            },
+            "template": "section24.ftl"
+          },
+          {
+            "title": "恶意一代码检测",
+            "method": "",
+            "children": [
+              {
+                "title": "恶意软件检测",
+                "mehthod": "",
+                "data": {
+                  "table": [["virus_engine1","check_result1","dirctory1"]]
+                },
+                "children": [],
+                "level": {
+                  "parentLevel": "2.5",
+                  "format": "2.5.1.",
+                  "order": "1"
+                },
+                "template": "section251.ftl"
+              }
+            ],
+            "data": {},
+            "level": {
+              "parentLevel": "2",
+              "format": "2.5.",
+              "order": "5"
+            },
+            "template": ""
+          }
+        ],
+        "level": {
+          "parentLevel": "",
+          "format": "2.",
+          "order": 2
+        },
+        "template": ""
+      }
+    ],
+    "data": {},
+    "level": {
+      "parentLevel": "",
+      "format": "",
+      "order": 0
+    },
+    "template": ""
+  },
+  "cover": {
+    "template": "cover.ftl",
+    "data": {
+      "org_name": "",
+      "app_name": "DIR-645A1",
+      "title": "固件安全检测报告",
+      "references": [
+        {
+          "type": "image",
+          "name": "bg_img",
+          "property": {
+            "imagePath": "E:\\ky\\ky\\ssp\\backend\\reportj\\data\\cover.jpg"
+          }
+        },
+        {
+          "type": "image",
+          "name": "logo_img",
+          "property": {
+            "imagePath": "E:\\ky\\ky\\ssp\\backend\\reportj\\data\\logo.png"
+          }
+        }
+      ]
+    }
+  },
+  "about": null
+}

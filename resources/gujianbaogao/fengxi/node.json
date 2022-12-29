@@ -1,0 +1,30 @@
+{
+  "children": [
+    {
+      "title": "说明",
+      "children": [
+        {
+          "title":"保护级别的定义",
+          "method": "DrawSection11"
+        },{
+          "title":"可收集个人信息权限",
+          "method": ""
+        }
+      ]
+    },{
+      "title":"检测结果",
+      "children": [
+        {
+          "title": "App基本信息",
+          "method": ""
+        },{
+          "title": "声明权限情况",
+          "method": ""
+        },{
+          "title": "总体情况",
+          "method": ""
+        }
+      ]
+    }
+  ]
+}
